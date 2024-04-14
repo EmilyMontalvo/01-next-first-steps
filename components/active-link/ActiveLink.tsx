@@ -16,7 +16,10 @@ const ActiveLink = ({path, text}: Props) => {
   return (
     <div>
      {/* 1. Le da el color activo  y después compara los path, si son iguales lo deja en color azul (aplica el otro estilo)  */}
-      <Link href={path} className={ `${style.link} ${ (pathName === path) && style['active-link']}`}>{text}</Link>
+      <Link
+      prefetch={true}
+       href={path} 
+       className={ `${style.link} ${ (pathName === path) && style['active-link']}`}>{text}</Link>
     </div>
   )
 }
